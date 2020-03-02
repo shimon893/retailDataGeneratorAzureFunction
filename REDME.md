@@ -1,0 +1,1 @@
+## Azure Function to generate fake retail loyalty data
