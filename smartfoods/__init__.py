@@ -164,15 +164,15 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         try:
             filename = str(pathlib.Path(__file__).parent)+ '/Data/customer/customer_'+trans_date.replace('-','')+'.csv'
             with open(filename, newline='') as csvfile:
-                items_csv = csv.DictReader(csvfile,fieldnames = ( "loyalty_num","name","email","dob","city","state","membersince" ), delimiter=',')
-                next(items_csv)
+                items_csv = csv.DictReader(csvfile,fieldnames = ( "loyalty_num","name","email","dob","address","city","state","postCode","membersince" ), delimiter=',')
+                #next(items_csv)
                 response = json.dumps( [ row for row in items_csv ] )
         except:
             update_customer_date_range(trans_date.replace('-',''))
             filename = str(pathlib.Path(__file__).parent)+ '/Data/customer/customer_'+trans_date.replace('-','')+'.csv'
             with open(filename, newline='') as csvfile:
-                items_csv = csv.DictReader(csvfile,fieldnames = ( "loyalty_num","name","email","dob","city","state","membersince" ), delimiter=',')
-                next(items_csv)
+                items_csv = csv.DictReader(csvfile,fieldnames = ( "loyalty_num","name","email","dob","address","city","state","postCode","membersince" ), delimiter=',')
+                #next(items_csv)
                 response = json.dumps( [ row for row in items_csv ] )
         return func.HttpResponse(
         #json.dumps(response),
