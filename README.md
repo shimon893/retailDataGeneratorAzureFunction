@@ -36,7 +36,7 @@ For transactions data on a particular date:
         2. call the API (Locally) for any date in future and the function 
         will generate the data for date plus all days before it.
     
-## Date (HTTP Response):
+## Data (HTTP Response):
 
 ### Customer (JSON):
 
