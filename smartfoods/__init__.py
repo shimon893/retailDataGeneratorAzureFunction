@@ -128,7 +128,7 @@ def new_transaction(transdate,item_count,items,custs):
         trans['loyaltyNum'] = ''
     else:
         trans['loyaltyNum'] = custs[random_cust][0]
-    trans['store'] = custs[random_cust][4]
+    trans['store'] = custs[random_cust][5]
     trans['timestamp'] = str(datetime.strptime(transdate, '%Y-%m-%d')+timedelta(minutes=random.randint(1,1440)))
     trans['invoiceNumber'] = hashlib.md5((str(datetime.now())+str(random.randint(1,134322442))+str(random.randint(1,134322442))+str(custs[random_cust][0])).encode()).hexdigest()
     trans['items'] = []
