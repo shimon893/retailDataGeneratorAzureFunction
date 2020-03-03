@@ -1,5 +1,5 @@
 # Azure Functions to generate fake retail loyalty data
-
+[![Deploy to Azure](https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/deploybutton.png)](https://azuredeploy.net/)
 ## Introduction
 This is an Azure Python Function to generate fake retail data. The main purpose of this function is to support POC/Workshops.
 
