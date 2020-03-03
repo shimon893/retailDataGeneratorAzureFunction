@@ -217,7 +217,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     return func.HttpResponse(
         #json.dumps(response),
         response,
-        mimetype="application/json",
+        mimetype="text/csv",
     )
     
     
