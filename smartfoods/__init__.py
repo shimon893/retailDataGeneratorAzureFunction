@@ -33,7 +33,7 @@ def gen_customers(cust_count=2):
                                 quotechar='"', quoting=csv.QUOTE_MINIMAL)
         for i in range(cust_count):
             person = fake.simple_profile(sex=None)
-            csvwriter.writerow([fake.bban(),person['name'],person['mail'],person['birthdate'],fake.address().replace("\n"," "),fake.city(),fake.state(),fake.postcode(),fake.date_between(start_date="-6y", end_date="today")])
+            csvwriter.writerow([fake.bban()+str(random.randint(1,208888888888888888888)),person['name'],person['mail'],person['birthdate'],fake.address().replace("\n"," "),fake.city(),fake.state(),fake.postcode(),fake.date_between(start_date="-6y", end_date="today")])
 
 def date_range_gen(EndDate):
     startDate = EndDate
@@ -107,7 +107,7 @@ def update_customers(customerFile,fileDate,Delta=False):
             
         for i in range(insert_count):
             person = fake.simple_profile(sex=None)
-            csvwriter.writerow([fake.bban(),person['name'],person['mail'],person['birthdate'],fake.address().replace("\n"," "),fake.city(),fake.state(),fake.postcode(),fake.date_between(start_date="-6y", end_date="today")])
+            csvwriter.writerow([fake.bban()+str(random.randint(1,208888888888888888888)),person['name'],person['mail'],person['birthdate'],fake.address().replace("\n"," "),fake.city(),fake.state(),fake.postcode(),fake.date_between(start_date="-6y", end_date="today")])
 def new_lineItem(items):
     rand = random.randint(1,len(items)-1)
     lineItem = {}
