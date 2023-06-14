@@ -13,7 +13,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         print (uname.upper())
         print (password)
         if (uname.upper() == 'ADFLAB' and password == 'Password.1!'):
-            response = json.dumps({"token" : "b3GP8tWecoK3Z42FqEaX5LfwoZwrqMnIpkUJ1bGUBnByFxgfvkpzVQ=="})
+            response = json.dumps({"token" : "Ei9QUGYtgHY60xmGLQhmVnOnI1STqMZphxMlGT6pQgD8AzFuUqc89A=="})
             return func.HttpResponse(
                 response,
                 mimetype="application/json",        
